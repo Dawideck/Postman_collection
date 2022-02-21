@@ -8,9 +8,6 @@
 		{
 			"name": "GET all boards",
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -34,9 +31,6 @@
 		{
 			"name": "GET a board",
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -62,7 +56,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.trello.com/1/boards/?name=TestBoardDlaKartki&key={{trelloApiKey}}&token={{trelloApiToken}}",
+					"raw": "https://api.trello.com/1/boards/?name=TestBoardDlaKartk",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -77,15 +71,7 @@
 					"query": [
 						{
 							"key": "name",
-							"value": "TestBoardDlaKartki"
-						},
-						{
-							"key": "key",
-							"value": "{{trelloApiKey}}"
-						},
-						{
-							"key": "token",
-							"value": "{{trelloApiToken}}"
+							"value": "TestBoardDlaKartk"
 						}
 					]
 				}
@@ -288,6 +274,11 @@
 		"type": "oauth1",
 		"oauth1": [
 			{
+				"key": "signatureMethod",
+				"value": "HMAC-SHA256",
+				"type": "string"
+			},
+			{
 				"key": "consumerSecret",
 				"value": "{{trelloApiSecret}}",
 				"type": "string"
@@ -300,11 +291,6 @@
 			{
 				"key": "consumerKey",
 				"value": "{{trelloApiKey}}",
-				"type": "string"
-			},
-			{
-				"key": "signatureMethod",
-				"value": "HMAC-SHA1",
 				"type": "string"
 			},
 			{
