@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "0f8abcd1-22d6-4a4e-831f-935d13bfa176",
+		"name": "Trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all boards",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/members/me/boards",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"members",
+						"me",
+						"boards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET a board",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/6213c2b882f9cb6111b124cc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"6213c2b882f9cb6111b124cc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=TestBoardDlaKartki&key={{trelloApiKey}}&token={{trelloApiToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "TestBoardDlaKartki"
+						},
+						{
+							"key": "key",
+							"value": "{{trelloApiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloApiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rename board",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/6213d41c4f476153317f7908?key={{trelloApiKey}}&token={{trelloApiToken}}&name=TestZmieniony",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"6213d41c4f476153317f7908"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloApiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloApiToken}}"
+						},
+						{
+							"key": "name",
+							"value": "TestZmieniony"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET lists on board",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/6213d9cb7c2651169f9fed77/lists?key={{trelloApiKey}}&token={{trelloApiToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"6213d9cb7c2651169f9fed77",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloApiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloApiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rename a list",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists/6213d41c4f476153317f790a/name?key={{trelloApiKey}}&token={{trelloApiToken}}&value=ZarazZrobie",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists",
+						"6213d41c4f476153317f790a",
+						"name"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloApiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloApiToken}}"
+						},
+						{
+							"key": "value",
+							"value": "ZarazZrobie"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a board",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/6213d41c4f476153317f7908?key={{trelloApiKey}}&token={{trelloApiToken}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"6213d41c4f476153317f7908"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloApiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloApiToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=6213d9cb7c2651169f9fed78&key={{trelloApiKey}}&token={{trelloApiToken}}&name=TestKartka&desc=TestOpisKartki",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "6213d9cb7c2651169f9fed78"
+						},
+						{
+							"key": "key",
+							"value": "{{trelloApiKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloApiToken}}"
+						},
+						{
+							"key": "name",
+							"value": "TestKartka"
+						},
+						{
+							"key": "desc",
+							"value": "TestOpisKartki"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth1",
+		"oauth1": [
+			{
+				"key": "consumerSecret",
+				"value": "{{trelloApiSecret}}",
+				"type": "string"
+			},
+			{
+				"key": "token",
+				"value": "{{trelloApiToken}}",
+				"type": "string"
+			},
+			{
+				"key": "consumerKey",
+				"value": "{{trelloApiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "signatureMethod",
+				"value": "HMAC-SHA1",
+				"type": "string"
+			},
+			{
+				"key": "version",
+				"value": "1.0",
+				"type": "string"
+			},
+			{
+				"key": "addParamsToHeader",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "addEmptyParamsToSign",
+				"value": false,
+				"type": "boolean"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
